@@ -1,0 +1,51 @@
+{
+  "name": "monochrome",
+  "displayName": "Monochrome",
+  "description": "Monochromatic theme collection, for those who seeks.",
+  "publisher": "anotherglitchinthematrix",
+  "version": "2.1.1",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1a1a1a",
+    "theme": "dark"
+  },
+  "author": {
+    "name": "Ali Can YILDIZ",
+    "email": "anotherglitchinthematrix@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anotherglitchinthematrix/monochrome.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anotherglitchinthematrix/monochrome/issues"
+  },
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "light",
+    "dark",
+    "monochrome",
+    "minimal",
+    "minimalist",
+    "subtle"
+  ],
+  "contributes": {
+    "themes": []
+  },
+  "devDependencies": {
+    "chroma-js": "^2.1.0",
+    "lodash.merge": "^4.6.2",
+    "nodemon": "^2.0.3"
+  },
+  "scripts": {
+    "start": "nodemon --watch src src/index.js",
+    "build": "node src/index.js"
+  }
+}
