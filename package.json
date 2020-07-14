@@ -37,7 +37,13 @@
     "subtle"
   ],
   "contributes": {
-    "themes": []
+    "themes": [
+      {
+        "label": "Monochrome Dark",
+        "uiTheme": "vs-dark",
+        "path": "./theme/monochrome-dark.json"
+      }
+    ]
   },
   "devDependencies": {
     "chroma-js": "^2.1.0",

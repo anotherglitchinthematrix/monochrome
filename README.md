@@ -19,9 +19,9 @@ Monochrome is a monochromatic<sup>[1]</sup> theme collection for **Visual Studio
 
 Click to enlarge the previews.
 
-| Name | Preview |
-| ---: | ------- |
-
+|            Name | Preview                                                                                |
+| --------------: | -------------------------------------------------------------------------------------- |
+| Monochrome Dark | [<img src="./preview/monochrome-dark.png" width="128">](./preview/monochrome-dark.png) |
 
 ## Base Colors
 
@@ -29,7 +29,7 @@ As one should be expecting from a _monochromatic_ color scheme, there isn't much
 
 | Name | Foreground | Background |
 | ---: | :--------: | :--------: |
-
+| Dark |  #EBEBEB   |  #101010   |
 
 ## Fine Tunings
 
