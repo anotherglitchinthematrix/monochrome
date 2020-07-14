@@ -17,6 +17,11 @@ const themes = [
     background: '#0A1219',
     foreground: '#F1F5F9',
   }),
+  theme({
+    name: 'monochrome-light-subtle',
+    background: '#F1F5F9',
+    foreground: '#0A1219',
+  }),
 ];
 
 module.exports = themes;
