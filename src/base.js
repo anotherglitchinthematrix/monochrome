@@ -67,7 +67,7 @@ const base = () => {
       'editorWarning.foreground': 0.3607843137254902,
       'editorWhitespace.foreground': 0.10196078431372549,
       'editorWidget.background': 0,
-      'focusBorder': 0.2196078431372549,
+      'focusBorder': 0,
       'gitDecoration.ignoredResourceForeground': 0.154,
       'gitDecoration.addedResourceForeground': 0.752,
       'gitDecoration.modifiedResourceForeground': 0.752,
