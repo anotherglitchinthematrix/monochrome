@@ -2,6 +2,7 @@ const merge = require('lodash.merge');
 const chroma = require('chroma-js');
 const transform = require('./transform');
 const base = require('./base');
+const exceptions = require('./exceptions');
 
 /**
  * Generates a monochrome color scheme.
@@ -34,7 +35,9 @@ const scheme = ({ background, foreground, override, amplifier }) => {
   }
 
   // Apply transformation and return the generated scheme.
-  return transform(draft, (_, v) => transformation(v, background, foreground));
+  return transform(draft, (k, v) =>
+    transformation(k, v, background, foreground)
+  );
 };
 
 /**
@@ -49,10 +52,38 @@ const amplify = (value, amplifier) => {
 /**
  * Transforms transparency values into colors.
  */
-const transformation = (value, background, foreground) => {
+const transformation = (key, value, background, foreground) => {
   if (typeof value !== 'number') return;
 
-  return chroma.scale([background, foreground])(value).hex();
+  // Determinate the color generation strategy.
+  const fn = exceptions.some((e) => e === key) ? asRGBA : asRGB;
+
+  // Calculate the hex color.
+  return fn.call(this, background, foreground, value).hex();
+};
+
+/**
+ * RRGGBBAA Color generation strategy.
+ *
+ * @param {*} _ Discarded background color.
+ * @param {*} foreground Foreground color.
+ * @param {*} value Transparency value.
+ * @returns RRGGBBAA color.
+ */
+const asRGBA = (_, foreground, value) => {
+  return chroma(foreground).alpha(value);
+};
+
+/**
+ * RRGGBB Color generation strategy.
+ *
+ * @param {*} background Background color.
+ * @param {*} foreground Foreground color.
+ * @param {*} value blend value.
+ * @returns RRGGBB color.
+ */
+const asRGB = (background, foreground, value) => {
+  return chroma.scale([background, foreground])(value);
 };
 
 /**
