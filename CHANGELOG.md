@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.3] - 2020-07-17
+
+### Added
+
+- Allowed transparency exceptions added.
+- Focus border transparency value changed.
+
 ## [2.1.1] - 2020-07-15
 
 ### Added
