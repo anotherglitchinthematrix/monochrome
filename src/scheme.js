@@ -24,7 +24,7 @@ const scheme = ({ background, foreground, override, amplifier }) => {
   );
 
   // Merge with the generated warning scheme;
-  merge(draft, warningScheme(background));
+  merge(draft, warningScheme(foreground));
 
   // Apply overrides.
   if (override != null) merge(draft, override);
@@ -100,15 +100,15 @@ const RGB = (b, f, v) => chroma.scale([b, f])(v);
 /**
  * Defines the warning colors.
  *
- * @param {*} background Background color.
+ * @param {*} color The primary color to calculate the warning colors.
  * @return {*} Warning theme data.
  */
-const warningScheme = (background) => {
+const warningScheme = (color) => {
   // Calculate the error color.
-  const error = chroma.scale([background, 'red']).mode('lab')(0.8).hex();
+  const error = chroma.scale([color, 'red']).mode('lab')(0.75).hex();
 
   // Calculate the warning color.
-  const warning = chroma.scale([background, 'orange']).mode('lab')(0.8).hex();
+  const warning = chroma.scale([color, 'orange']).mode('lab')(0.75).hex();
 
   return {
     colors: {
