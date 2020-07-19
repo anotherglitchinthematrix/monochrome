@@ -30,61 +30,72 @@ const scheme = ({ background, foreground, override, amplifier }) => {
   if (override != null) merge(draft, override);
 
   // Amplify the transparency multipliers.
-  if (amplifier != null && amplifier != 1) {
-    transform(draft, (_, v) => amplify(v, amplifier));
-  }
+  if (amplifier != 1) transform(draft, test, (_, v) => amplify(v, amplifier));
 
-  // Apply transformation and return the generated scheme.
-  return transform(draft, (k, v) =>
-    transformation(k, v, background, foreground)
-  );
+  // Apply color transformation.
+  transform(draft, test, (k, v) => colorize(k, v, background, foreground));
+
+  // Return the generated scheme.
+  return draft;
 };
+
+/**
+ * Defines a test for the transform functions.
+ *
+ * Any value that satisfies the test will be processed.
+ *
+ * @param {*} _ Discarded key.
+ * @param {*} v Value.
+ */
+const test = (_, v) => typeof v === 'number';
 
 /**
  * Modifies the transparency value by the given factor.
+ *
+ * @param {*} t Transparency value.
+ * @param {*} a Amplifier value.
  */
-const amplify = (value, amplifier) => {
-  if (typeof value !== 'number') return;
-
-  return Math.min(Math.max(0, value * amplifier), 1);
-};
+const amplify = (t, a) => Math.min(Math.max(0, t * a), 1);
 
 /**
- * Transforms transparency values into colors.
+ * Colorization transformation.
+ *
+ * Determinates the color generation strategy and applies it.
+ *
+ * @param {*} k Key.
+ * @param {*} v Value.
+ * @param {*} b Background color.
+ * @param {*} f Foreground color.
+ * @returns RRGGBBAA | RRGGBB color in the hex format.
  */
-const transformation = (key, value, background, foreground) => {
-  if (typeof value !== 'number') return;
+const colorize = (k, v, b, f) => colorant(k).call(this, b, f, v).hex();
 
-  // Determinate the color generation strategy.
-  const fn = exceptions.some((e) => e === key) ? asRGBA : asRGB;
-
-  // Calculate the hex color.
-  return fn.call(this, background, foreground, value).hex();
-};
+/**
+ * Determinates the color generation strategy by looking into exceptions list.
+ *
+ * @param {*} k Key of the property to be checked.
+ */
+const colorant = (k) => (exceptions.some((e) => e === k) ? RGBA : RGB);
 
 /**
  * RRGGBBAA Color generation strategy.
  *
  * @param {*} _ Discarded background color.
- * @param {*} foreground Foreground color.
- * @param {*} value Transparency value.
+ * @param {*} f Foreground color.
+ * @param {*} v Transparency value.
  * @returns RRGGBBAA color.
  */
-const asRGBA = (_, foreground, value) => {
-  return chroma(foreground).alpha(value);
-};
+const RGBA = (_, f, v) => chroma(f).alpha(v);
 
 /**
  * RRGGBB Color generation strategy.
  *
- * @param {*} background Background color.
- * @param {*} foreground Foreground color.
- * @param {*} value blend value.
+ * @param {*} b Background color.
+ * @param {*} f Foreground color.
+ * @param {*} v Blend value.
  * @returns RRGGBB color.
  */
-const asRGB = (background, foreground, value) => {
-  return chroma.scale([background, foreground])(value);
-};
+const RGB = (b, f, v) => chroma.scale([b, f])(v);
 
 /**
  * Defines the warning colors.
