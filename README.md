@@ -73,13 +73,13 @@ You can also override theme definitions either with a **foreground multiplier** 
 Run the script below to automatically generate the themes on file modifications.
 
 ```shell
-$ pnmp run start
+$ pnpm run start
 ```
 
 Run the script below to build themes.
 
 ```shell
-$ pnmp run build
+$ pnpm run build
 ```
 
 ## Suggested Settings
