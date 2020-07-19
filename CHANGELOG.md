@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.4] - 2020-07-19
+
+- Object transformation functionality improved.
+- Scheme generation steps improved.
+- Output of the warning scheme improved.
+
 ## [2.2.3] - 2020-07-17
 
 ### Added
