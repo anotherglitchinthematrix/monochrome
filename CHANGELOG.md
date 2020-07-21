@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.3.0] - 2020-07-21
+
+- editorHoverWidget.statusBarBackground value changed.
+- Monochrome Dark Amplified theme created.
+- Monochrome Light Amplified theme created.
+
 ## [2.2.4] - 2020-07-19
 
 - Object transformation functionality improved.
