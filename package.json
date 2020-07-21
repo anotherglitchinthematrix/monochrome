@@ -62,6 +62,11 @@
         "label": "Monochrome Dark Amplified",
         "uiTheme": "vs-dark",
         "path": "./theme/monochrome-dark-amplified.json"
+      },
+      {
+        "label": "Monochrome Light Amplified",
+        "uiTheme": "vs",
+        "path": "./theme/monochrome-light-amplified.json"
       }
     ]
   },
