@@ -57,6 +57,11 @@
         "label": "Monochrome Light Subtle",
         "uiTheme": "vs",
         "path": "./theme/monochrome-light-subtle.json"
+      },
+      {
+        "label": "Monochrome Dark Amplified",
+        "uiTheme": "vs-dark",
+        "path": "./theme/monochrome-dark-amplified.json"
       }
     ]
   },

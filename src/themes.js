@@ -22,6 +22,11 @@ const themes = [
     background: '#F1F5F9',
     foreground: '#0A1219',
   }),
+  theme({
+    name: 'monochrome-dark-amplified',
+    background: '#000000',
+    foreground: '#FFFFFF',
+  }),
 ];
 
 module.exports = themes;
