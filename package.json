@@ -83,7 +83,7 @@
   "devDependencies": {
     "chroma-js": "^2.1.0",
     "lodash.merge": "^4.6.2",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.9"
   },
   "scripts": {
     "start": "nodemon --watch src src/index.js",
