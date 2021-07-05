@@ -27,6 +27,8 @@ Click to enlarge the previews.
 |    Monochrome Light Subtle | [<img src="./preview/monochrome-light-subtle.png" width="128">](./preview/monochrome-light-subtle.png)       |
 |  Monochrome Dark Amplified | [<img src="./preview/monochrome-dark-amplified.png" width="128">](./preview/monochrome-dark-amplified.png)   |
 | Monochrome Light Amplified | [<img src="./preview/monochrome-light-amplified.png" width="128">](./preview/monochrome-light-amplified.png) |
+|  Monochrome Dark Cool Gray | [<img src="./preview/monochrome-dark-cool-gray.png" width="128">](./preview/monochrome-dark-cool-gray.png)   |
+| Monochrome Light Cool Gray | [<img src="./preview/monochrome-light-cool-gray.png" width="128">](./preview/monochrome-light-cool-gray.png) |
 
 ## Base Colors
 
@@ -40,6 +42,8 @@ As one should be expecting from a _monochromatic_ color scheme, there isn't much
 |    Light Subtle |  #0A1219   |  #F1F5F9   |
 |  Dark Amplified |  #FFFFFF   |  #000000   |
 | Light Amplified |  #000000   |  #FFFFFF   |
+|  Dark Cool Gray |  #111827   |  #F9FAFB   |
+| Light Cool Gray |  #F9FAFB   |  #111827   |
 
 ## Fine Tunings
 
