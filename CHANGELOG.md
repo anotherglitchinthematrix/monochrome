@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.0] - 2021-07-05
+- focusBorder, sash.hoverBorder, list.activeSelectionBackground, menubar.selectionBackground improved.
+- Monochrome Dark Cool Gray theme created.
+- Monochrome Light Cool Gray theme created.
+
+
 ## [2.3.0] - 2020-07-21
 
 - editorHoverWidget.statusBarBackground value changed.
