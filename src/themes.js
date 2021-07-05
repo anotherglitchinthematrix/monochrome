@@ -32,6 +32,16 @@ const themes = [
     background: '#FFFFFF',
     foreground: '#000000',
   }),
+  theme({
+    name: 'monochrome-dark-cool-gray',
+    background: '#111827',
+    foreground: '#F9FAFB',
+  }),
+  theme({
+    name: 'monochrome-light-cool-gray',
+    background: '#F9FAFB',
+    foreground: '#111827',
+  }),
 ];
 
 module.exports = themes;

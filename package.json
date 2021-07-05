@@ -67,6 +67,16 @@
         "label": "Monochrome Light Amplified",
         "uiTheme": "vs",
         "path": "./theme/monochrome-light-amplified.json"
+      },
+      {
+        "label": "Monochrome Dark Cool Gray",
+        "uiTheme": "vs",
+        "path": "./theme/monochrome-dark-cool-gray.json"
+      },
+      {
+        "label": "Monochrome Light Cool Gray",
+        "uiTheme": "vs",
+        "path": "./theme/monochrome-light-cool-gray.json"
       }
     ]
   },
