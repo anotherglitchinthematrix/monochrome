@@ -70,7 +70,7 @@
       },
       {
         "label": "Monochrome Dark Cool Gray",
-        "uiTheme": "vs",
+        "uiTheme": "vs-dark",
         "path": "./theme/monochrome-dark-cool-gray.json"
       },
       {
