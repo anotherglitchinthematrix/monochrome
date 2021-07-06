@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.3] - 2021-07-06
+- Bundle size fix.
+
 ## [2.4.2] - 2021-07-06
 - Fix Monochrome Dark Cool Gray theme uiTheme setting.
 
